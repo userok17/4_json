@@ -11,15 +11,15 @@ def load_data(filepath):
         return json.load(data_file)
 
 
-def pretty_print_json(data):
-    return pprint(data)
+def pretty_print_json(json_data):
+    return pprint(json_data)
 
 def parser_command():
     parser = OptionParser()
     parser.add_option('-f', '--filepath', help='Укажите файл до json файла',dest='filepath')
     opts, args = parser.parse_args()
     if opts.filepath:
-        pprint(load_data(opts.filepath))
+        pretty_print_json(load_data(opts.filepath))
         
 
 
