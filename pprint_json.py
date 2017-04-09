@@ -19,7 +19,8 @@ def parser_command():
     parser.add_option('-f', '--filepath', help='Укажите файл до json файла',dest='filepath')
     opts, args = parser.parse_args()
     if opts.filepath:
-        pretty_print_json(load_data(opts.filepath))
+        json_data = load_data(opts.filepath)
+        pretty_print_json(json_data)
         
 
 
