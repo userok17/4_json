@@ -10,7 +10,15 @@ Example of script launch on Linux, Python 3.5:
 
 ```#!bash
 
-$ python pprint_json.py <path to file>
+$ python pprint_json.py -h
+Usage: pprint_json.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f FILEPATH, --filepath=FILEPATH
+                        Укажите файл до json файла
+
+$ python pprint_json.py -f <path to file>
 # TODO add output example
 [
     {

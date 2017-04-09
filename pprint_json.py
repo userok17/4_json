@@ -1,6 +1,8 @@
 import json
 import os
 from pprint import pprint
+from optparse import OptionParser
+
 
 def load_data(filepath):
     if not os.path.exists(filepath):
@@ -12,7 +14,14 @@ def load_data(filepath):
 def pretty_print_json(data):
     return pprint(data)
 
+def parser_command():
+    parser = OptionParser()
+    parser.add_option('-f', '--filepath', help='Укажите файл до json файла',dest='filepath')
+    opts, args = parser.parse_args()
+    if opts.filepath:
+        pprint(load_data(opts.filepath))
+        
+
 
 if __name__ == '__main__':
-    data = load_data('data-2897-2016-11-23.json')
-    pretty_print_json(data)
+    parser_command()
