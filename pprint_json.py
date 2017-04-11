@@ -15,7 +15,7 @@ def pretty_print_json(json_data):
     print(dumps)
 
 def main():
-    parser = ArgumentParser(description='Скрипт выводит  json содержимое в консоль в удобном формате')
+    parser = ArgumentParser(description='Скрипт выводит  json содержимое в консоль в удобном формате  (это называется pretty print).')
     parser.add_argument('-f', '--filepath', help='Укажите путь до json файла', required=True, dest='filepath')
     args = parser.parse_args()
     json_data = load_data(args.filepath)
