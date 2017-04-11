@@ -1,6 +1,6 @@
 # Prettify JSON
 
-Задача состоит в том, чтобы написать скрипт, который на вход принимает путь до файла, в котором хранится json и выводит его содержимое в консоль в удобном формате (это называется pretty print).
+Скрипт Prettify JSON на вход принимает путь до файла, в котором хранится json и выводит его содержимое в консоль в удобном формате.
 
 # Quickstart
 
@@ -18,7 +18,7 @@ Usage: pprint_json.py [options]
 Options:
   -h, --help            show this help message and exit
   -f FILEPATH, --filepath=FILEPATH
-                        Укажите файл до json файла
+                        Укажите путь до json файла
 
 $ python pprint_json.py -f <path to file>
 # TODO add output example
