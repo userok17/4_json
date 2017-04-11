@@ -1,6 +1,6 @@
 import json
 import os
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 
 def load_data(filepath):
@@ -15,15 +15,14 @@ def pretty_print_json(json_data):
     print(dumps)
 
 def main():
-    parser = OptionParser()
-    parser.add_option('-f', '--filepath', help='Укажите путь до json файла',dest='filepath')
-    opts, args = parser.parse_args()
-    if opts.filepath:
-        json_data = load_data(opts.filepath)
-        if json_data:
-            pretty_print_json(json_data)
-        else:
-            print('Неверно указан путь до json файла')
+    parser = ArgumentParser(description='Скрипт выводит  json содержимое в консоль в удобном формате')
+    parser.add_argument('-f', '--filepath', help='Укажите путь до json файла', required=True, dest='filepath')
+    args = parser.parse_args()
+    json_data = load_data(args.filepath)
+    if json_data:
+        pretty_print_json(json_data)
+    else:
+        print('Неверно указан путь до json файла')
         
 
 
