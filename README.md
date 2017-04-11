@@ -8,7 +8,6 @@
 
 Запуск на Linux:
 
-Example of script launch on Linux, Python 3.5:
 
 ```#!bash
 usage: pprint_json.py [-h] -f FILEPATH
